@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block title %} {% endblock %} {% block content %}
+<table class="table">
+  <td>
+    Name
+  </td>
+  <td>
+    Code
+  </td>
+  <td>
+    Classroom
+  </td>
+  <td>
+    Times
+  </td>
+  </tr>
+  {% for i in courses %}
+  <tr>
+    <td>
+      {{ i.name }}
+    </td>
+    <td>
+      {{ i.code }}
+    </td>
+    <td>
+      {{ i.classroom }}
+    </td>
+    <td>
+      {{ i.times }}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

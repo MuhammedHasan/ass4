@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block title %} {% endblock %} {% block content %}
+<table class="table">
+  <tr>
+    <td>
+      First Name
+    </td>
+    <td>
+      Last Name
+    </td>
+    <td>
+      Office Details
+    </td>
+    <td>
+      Phone
+    </td>
+    <td>
+      Email
+    </td>
+  </tr>
+  {% for i in teachers %}
+  <tr>
+    <td>
+      {{ i.first_name }}
+    </td>
+    <td>
+      {{ i.last_name }}
+    </td>
+    <td>
+      {{ i.office_details }}
+    </td>
+    <td>
+      {{ i.phone }}
+    </td>
+    <td>
+      {{ i.email }}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

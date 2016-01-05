@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %} {% endblock %} {% block content %}
+<table class="table">
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      Student
+    </td>
+  </tr>
+  {% for i in courses %}
+  <tr>
+    <td>
+      {{ i.name }}
+    </td>
+    <td>
+      <ul>
+        {% for j in i.students.all %}
+        <li> {{j.first_name}} {{j.last_name}} </li>
+        {% endfor %}
+      </ul>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

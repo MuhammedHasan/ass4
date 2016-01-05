@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %} {% endblock %} {% block content %}
+<p>
+  {% for title,form in forms %}
+  <form class="" action="/course-register/" method="post">
+    {% csrf_token %}
+    <p>
+      {{ title }}
+    </p>
+    {{ form.as_p }}
+    <input type="submit" name="name" value="Enroll">
+  </form>
+  {% endfor %}
+</p>
+{% endblock %}
